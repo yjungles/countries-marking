@@ -1,0 +1,23 @@
+{
+  "name": "countries-marking",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.12.2",
+    "apexcharts": "^3.22.3",
+    "core-js": "^3.6.5",
+    "nuxt": "^2.14.6",
+    "vue-apexcharts": "^1.6.0",
+    "vue-toastification": "^1.7.8",
+    "vue2-google-maps": "^0.10.7"
+  },
+  "devDependencies": {
+    "@nuxtjs/vuetify": "^1.11.2"
+  }
+}
