@@ -1,67 +1,80 @@
-import colors from 'vuetify/es5/util/colors'
+import colors from "vuetify/es5/util/colors";
 
 export default {
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
   ssr: false,
 
   // Target (https://go.nuxtjs.dev/config-target)
-  target: 'static',
+  target: "static",
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    titleTemplate: '%s - countries-marking',
-    title: 'countries-marking',
+    titleTemplate: "%s -  find countries around the world",
+    title: "Find Countries",
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { hid: "description", name: "description", content: "" }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [
-  ],
+  css: [],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [
-  ],
-
+  plugins: ["~/plugins/mirage.js"],
+  
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
-    '@nuxtjs/vuetify',
+    "@nuxtjs/vuetify"
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
+    "@nuxtjs/axios",
     
-    ["vue-toastification/nuxt", {
+    //notificações
+    [
+      "vue-toastification/nuxt",
+      {
         maxToasts: 5,
         newestOnTop: true,
-        closeOnClick: true,
+        closeOnClick: true
+      }
+    ],
+    //google maps
+    [
+      "nuxt-gmaps",
+      {
+        key: "AIzaSyDlpirCLbklQ-Wwdj96pA4e85G856vkeFY"
       }
     ]
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  axios: {},
+  axios: {
+    proxyHeaders: false,
+    credentials: false
+  },
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
+    customVariables: ["~/assets/variables.scss"],
     theme: {
-      dark: false,
+      dark: true,
       themes: {
+        light: {
+          primary: "#FD003A"
+        },
         dark: {
-          primary: colors.blue.darken2,
+          //   primary: colors.blue.darken2,
+          primary: "#FD003A",
           accent: colors.grey.darken3,
           secondary: colors.amber.darken3,
           info: colors.teal.lighten1,
@@ -74,6 +87,5 @@ export default {
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {
-  }
-}
+  build: {}
+};
