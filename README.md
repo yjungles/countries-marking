@@ -45,6 +45,15 @@ admin@admin.com
 - Vuetify
 - MirageJS
 
+## Outras informações
+
+A barra de pesquisa de países possui dois modos de funcionamento:
+- Pelo termo ou nome parcial - digitando o termo e em seguida clicando no ícone de lupa do campo.
+- Pelo nome exato - digitando o termo e o campo auto completa, exibindo a bandeira junto com o nome do país
+
+Exemplo (1): digitando o termo "bra" e clicando na lupa serão exibidos em lista os países "Brazil e Gibraltar".
+
+Exemplo (2): digitando o termo "bra" e clicando sobre o item e bandeira "Brazil", será exibido apenas o país "Brazil" detalhadamente.
 
 ## Contato
 ✔ yjungles@hotmail.com
