@@ -24,6 +24,8 @@ $ npm install
 $ npm run dev
 
 ```
+## Configurações
+Altere o arquivo ```nuxt.config.js``` inserindo sua chave de API Google para a utilização da API Google maps 
 
 ## Informações de login
 #### Email 
