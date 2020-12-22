@@ -52,7 +52,7 @@ export default {
     [
       "nuxt-gmaps",
       {
-        key: "AIzaSyDlpirCLbklQ-Wwdj96pA4e85G856vkeFY"
+        key: "SUA-CHAVE-API-GOOGLE"
       }
     ]
   ],
